@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Data Capture</title>
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Amazon Account Creation Data Capture form</h1>
+        <p class="lead">Please enter data for all the fields !! It would be used to create your amazon account</p>
+        <form class="needs-validation" id="myForm" novalidate>
+
+            <div class="form-group row select-div">
+                <label for="exampleFormControlSelect" class="col-sm-2 col-form-label">Amazon URL</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="exampleFormControlSelect" required>
+                        <option>...</option>
+                        <option>amazon.com.au</option>
+                        <option>amazon.com.br</option>
+                        <option>amazon.ca</option>
+                        <option>amazon.fr</option>
+                        <option>amazon.de</option>
+                        <option>amazon.in</option>
+                        <option>amazon.it</option>
+                        <option>amazon.co.jp</option>
+                        <option>amazon.com.mx</option>
+                        <option>amazon.es</option>
+                        <option>amazon.co.uk</option>
+                        <option>amazon.com</option>
+                    </select>
+                </div>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please select value
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="inputName" placeholder="Name" required>
+                </div>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter value
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+                </div>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter value
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                </div>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter value
+                </div>
+
+            </div>
+
+            <div class="form-group">
+                <label for="inputAddress">Address1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter value
+                </div>
+
+            </div>
+            <div class="form-group">
+                <label for="inputAddress2">Address2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"
+                       required>
+
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+
+                <div class="invalid-feedback">
+                    Please enter value
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity" required>
+
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+
+                    <div class="invalid-feedback">
+                        Please enter value
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-3">
+                    <label for="inputState">Country</label>
+                    <input type="text" class="form-control" id="inputState" required>
+
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+
+                    <div class="invalid-feedback">
+                        Please enter value
+                    </div>
+
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip" required>
+
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+
+                    <div class="invalid-feedback">
+                        Please enter value
+                    </div>
+
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="inputCountryCode">Country Code</label>
+                    <input type="text" class="form-control" id="inputCountryCode">
+                </div>
+
+                <div class="form-group col-md-2">
+                    <label for="inputPhoneNo">Mobile No</label>
+                    <input type="text" class="form-control" id="inputPhoneNo">
+                </div>
+
+            </div>
+
+            <div class="form-group row">
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!-- Optional JavaScript -->
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+
+
+$("#myForm").submit(function(event){
+   event.preventDefault()
+})
+
+var objArray = [
+    {
+        "URL" : "amazon.com.au",
+        "Address1": "2 park street",
+        "Address2": "NSW 2000",
+        "City": "Sydney",
+        "Country": "Australia",
+        "Zip": "2006",
+        "Ccode" :"+61",
+        "Mob":"282686000"
+    },
+    {
+        "URL" : "amazon.com.br",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.ca",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+       "URL" : "amazon.fr",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.de",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.in",
+        "Address1": "Hauz Khas Village, Old shakti road",
+        "Address2": "Near Metro Station",
+        "City": "New Delhi",
+        "Country": "India",
+        "Zip": "110011",
+        "Ccode" :"+91",
+        "Mob":"8091004977"
+    },
+    {
+        "URL" : "amazon.it",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.co.jp",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.com.mx",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+    {
+        "URL" : "amazon.es",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+     {
+        "URL" : "amazon.co.uk",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    },
+     {
+        "URL" : "amazon.com",
+        "Address1": "1024,Av. Paulista R. Augusta",
+        "Address2": "Bela Vista",
+        "City": "São Paulo",
+        "Country": "Brazil",
+        "Zip": "01310-000",
+        "Ccode" :"+55",
+        "Mob":"9999999999"
+    }
+];
+var urlArray = [];
+var address1 = [];
+var address2 = [];
+var city = [];
+var country = [];
+var zip = [];
+var ccode = [];
+var mob = [];
+
+$(function () {
+    $('.select-div').on('change', 'select', function (e) {//use on to delegate
+        var v = $(e.target).val(), t = $(e.target).find(':selected').text(), p = $(e.target).closest('.select-div');
+            buildArrays();
+            console.log(v);
+            console.log(t);
+            console.log(p);
+            fillOtherValues(v);
+        });
+});
+
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+                alert("Success !! All the details have been successfully processed");
+            }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+
+
+})();
+
+function buildArrays() {
+
+	$(objArray).each(function(key) {
+
+	  	for ( i=1; i<objArray.length; i++ ) {
+	  		urlArray.push(this.URL);
+	  		address1.push(this.Address1);
+	  		address2.push(this.Address2);
+	  		city.push(this.City);
+	  		country.push(this.Country);
+	  		zip.push(this.Zip);
+	  		ccode.push(this.Ccode);
+	  		mob.push(this.Mob);
+
+	  	}
+  	});
+}
+
+function fillOtherValues(val) {
+	var index = $.inArray( val, urlArray );
+	$('input#inputAddress').val(address1[index]);
+	$('input#inputAddress2').val(address2[index]);
+	$('input#inputCity').val(city[index]);
+	$('input#inputState').val(country[index]);
+	$('input#inputZip').val(zip[index]);
+	$('input#inputCountryCode').val(ccode[index]);
+	$('input#inputPhoneNo').val(mob[index]);
+}
+
+
+
+</script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
